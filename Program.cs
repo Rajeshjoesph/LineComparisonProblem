@@ -1,28 +1,38 @@
-﻿namespace UC1_Cartesian_system
+﻿namespace UC2_EqualityOfTwoLines
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int point_X1 = 0;
-            int point_X2 = 0, point_Y1 = 0, point_Y2 = 0;
+            int point_x1;
+            int point_x2, point_y1, point_y2, line1, line2;
             double length;
+            //bool value1, value2;
 
-            Console.WriteLine("Enter the value of Point 1: ");
-            point_X1=Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the Secound value of Point 2:");
-            point_X2=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the First Value of Point: ");
+            point_x1=Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the Thired value of point 3");
-            point_Y1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Secount value of Point: ");
+            point_x2= Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the Foruth Value Of Point 4");
-            point_Y2=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the thires Value of Point: ");
+            point_y1= Convert.ToInt32(Console.ReadLine());
 
-            length = Math.Sqrt(Math.Pow(point_X2 - point_X1, 2)+Math.Pow(point_Y2-point_Y1,2));
+            Console.WriteLine("Enter the Forth Value of Point: ");
+            point_y2= Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Length of the Line: " + length);
+            
+
+            line1 = point_x2 - point_x1;
+            line2=point_y2- point_y1;
+
+            length = Math.Sqrt(Math.Pow(line1,2)+Math.Pow(line2,2));
+            Console.WriteLine("Length of the line:"+ length);
+                                   
+            Console.WriteLine(length.Equals(line1));
+            Console.WriteLine(length.Equals(line2));
+
         }
     }
 }
